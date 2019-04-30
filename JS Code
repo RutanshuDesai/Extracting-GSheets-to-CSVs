@@ -1,0 +1,205 @@
+function exportData() {
+  var sheetsToExport = [
+{name: 'Adam ABM FSI_FY20 - Webinars_Digital Event_FY20', spreadSheetId: '157P-kleJTmIPxwOMmtlH9V4XfZhW_5oS5pChpmvgQBQ', sheetId: 387069624}, 
+{name: 'Adam ABM FSI_FY20 - Newsletters/Email Programs_Email/Newletter_FY20', spreadSheetId: '157P-kleJTmIPxwOMmtlH9V4XfZhW_5oS5pChpmvgQBQ', sheetId: 719890848}, 
+{name: 'Adam ABM FSI_FY20 - In-Person Events_In-Person Event_FY20', spreadSheetId: '157P-kleJTmIPxwOMmtlH9V4XfZhW_5oS5pChpmvgQBQ', sheetId: 1130823435}, 
+{name: 'Alicia ABM Telco_FY20 Webinars/Virtual Events_Digital Event_FY20', spreadSheetId: '12b0ccDFkNu1Ikt5fKTznIv3_IJBW5Zin1FthYttHCjQ', sheetId: 314613069}, 
+{name: 'Alicia ABM Telco_FY20 Newsletters/Emails_Email/Newletter_FY20', spreadSheetId: '12b0ccDFkNu1Ikt5fKTznIv3_IJBW5Zin1FthYttHCjQ', sheetId: 1912698628}, 
+{name: 'Alicia ABM Telco_FY20 In-Person Events_In-Person Event_FY20', spreadSheetId: '12b0ccDFkNu1Ikt5fKTznIv3_IJBW5Zin1FthYttHCjQ', sheetId: 0}, 
+{name: 'Anisble Automates_All AA Events_In-Person Event_FY20', spreadSheetId: '18H68iehjjYdWhb4hS6x6UmNrlEaxG49zaFU9W5Cyv8Y', sheetId: 1397200079}, 
+{name: 'Ansible Workshops_Approved Workshops (V2)_In-Person Event_FY19', spreadSheetId: '1_TSdockXf_ucTurwQjpg5eReTVnKVpEVI7mSHwBSz1s', sheetId: 1397200079}, 
+{name: 'Ansible Workshops_Approved Workshops_In-Person Event_FY20', spreadSheetId: '1upz23KcCX2DdveH6QAKnGsRo9seSSQNmbHp_izHWgxg', sheetId: 1397200079}, 
+{name: 'Ansible and OpenShift Workshop_Approved Workshops_In-Person Event_FY20', spreadSheetId: '14EY1fcOp3BZdD6Ct1xsLK7uL2rNbaYsT2Ru-12noFEw', sheetId: 1397200079}, 
+{name: 'Canada_FY19 Events/Workshops/Other - NEW_In-Person Event_FY19', spreadSheetId: '1z74HnOF_nKx5A53tPjzzf85Irg7bCqnYMPaRUeKnqck', sheetId: 103284255}, 
+{name: 'Canada_FY20 In-Person Events/Workshops_In-Person Event_FY20', spreadSheetId: '13rNbgPYrOh8l5B-XQFZ4A7NwYM9_4WuvQpKpVJJVyRs', sheetId: 103284255}, 
+{name: 'CCN Roadshow_DEV Tracker_In-Person Event_FY20', spreadSheetId: '126a5vVwzzjWsl2h79Jy_3lZP9b3JcsaT9MafkcwedtU', sheetId: 1110630402}, 
+{name: 'CCN Roadshow_OPS Tracker_In-Person Event_FY20', spreadSheetId: '126a5vVwzzjWsl2h79Jy_3lZP9b3JcsaT9MafkcwedtU', sheetId: 353643213}, 
+{name: 'Central_FY19 - In-Person Events_In-Person Event_FY19', spreadSheetId: '1EWaVybQxUSdP7lSNQgygjJbUDDXPUZxiPKaoYtm-oVU', sheetId: 2013889669}, 
+{name: 'Central_FY20 - In-Person Events_In-Person Event_FY19', spreadSheetId: '1EWaVybQxUSdP7lSNQgygjJbUDDXPUZxiPKaoYtm-oVU', sheetId: 1323451993}, 
+{name: 'Channel_Webinars_Digital Event_FY19', spreadSheetId: '1QD05tY5l7-wPhkn5YkAt0QUNn0wOGcp6u77iU4Zb2xE', sheetId: 456920426}, 
+{name: 'Channel_In-Person Events_In-Person Event_FY19', spreadSheetId: '1QD05tY5l7-wPhkn5YkAt0QUNn0wOGcp6u77iU4Zb2xE', sheetId: 740406497}, 
+{name: 'Channel_Industry Events_Industry Event_FY19', spreadSheetId: '1QD05tY5l7-wPhkn5YkAt0QUNn0wOGcp6u77iU4Zb2xE', sheetId: 383225213}, 
+{name: 'Channel_Webinars_Digital Event_FY20', spreadSheetId: '1x3ont3vHiU0nMzN8L8C9XQOkY-u0ZIBOMPYSbdZxSrg', sheetId: 456920426}, 
+{name: 'Channel_In-Person Events_In-Person Event_FY20', spreadSheetId: '1x3ont3vHiU0nMzN8L8C9XQOkY-u0ZIBOMPYSbdZxSrg', sheetId: 740406497}, 
+{name: 'Channel_Industry Events_Industry Event_FY20', spreadSheetId: '1x3ont3vHiU0nMzN8L8C9XQOkY-u0ZIBOMPYSbdZxSrg', sheetId: 383225213}, 
+{name: 'CloudNativeEvents_ID Tracker_In-Person Event_FY19', spreadSheetId: '1NvLnAwLivX9RyWroNi4AP3kgxPT1YYJ92rMl0U2JOFk', sheetId: 801177165}, 
+{name: 'CCN Roadshow_NEW Go Faster Tracker_In-Person Event_FY19', spreadSheetId: '1-GlSKklA_BNoXBUpOaL2Wg4k3hV9SilPMhr0cVCPDX8', sheetId: 1110630402}, 
+{name: 'CCN Roadshow_NEW Get Ready Tracker_In-Person Event_FY19', spreadSheetId: '1-GlSKklA_BNoXBUpOaL2Wg4k3hV9SilPMhr0cVCPDX8', sheetId: 353643213}, 
+{name: 'Dawn CNA_Virtual Events_Digital Event_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 240966070}, 
+{name: 'Dawn CNA_DevSecOps: In-Person Events_In-Person Event_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 1548699375}, 
+{name: 'Dawn CNA_FoCNAD: In-Person Events_In-Person Event_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 2135174534}, 
+{name: 'Dawn CNA_M2M: In-Person Events_In-Person Event_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 1855796039}, 
+{name: 'Dawn CNA_Microservices Day: In-Person Events_In-Person Event_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 982327914}, 
+{name: 'Dawn CNA_Misc Activities_NA?_FY20', spreadSheetId: '1ftieB7FlzbGCyCzx9lBO5cZ0n0FTZZ8-ikd3ikHbPaE', sheetId: 1138216020}, 
+{name: 'Future of CNAD&Integration_Future of CNAD&Integration tracker_In-Person Event_FY19', spreadSheetId: '1OFwCwKo7gAI1I8J13vlnIwqsbyaF-NSKoEkwzS7PiIM', sheetId: 33418013}, 
+{name: 'GoFasterCS_Q119 Content Syndication_Content Syndication_FY19', spreadSheetId: '10oE24YLPhTLEJa-A-PXa0V3JK41VE2eHuXSiWCosvfw', sheetId: 1625911251}, 
+{name: 'GoFasterCS_Q219 Content Syndication_Content Syndication_FY19', spreadSheetId: '10oE24YLPhTLEJa-A-PXa0V3JK41VE2eHuXSiWCosvfw', sheetId: 1222833046}, 
+{name: 'GoFasterCS_Q319 Content Syndication_Content Syndication_FY19', spreadSheetId: '10oE24YLPhTLEJa-A-PXa0V3JK41VE2eHuXSiWCosvfw', sheetId: 0}, 
+{name: 'GoFasterCS_Q419 Content Syndication_Content Syndication_FY19', spreadSheetId: '10oE24YLPhTLEJa-A-PXa0V3JK41VE2eHuXSiWCosvfw', sheetId: 1706099747}, 
+{name: 'Anisble Automates_SFDC IDS_In-Person Event_FY19', spreadSheetId: '1SD-MIvqbZctKZTRmD_iJhM7ykXuZSqEzlrRx_2AyjUE', sheetId: 1215902444}, 
+{name: 'Nethawk_Fy19 Q1 Content Syndication_Content Syndication_FY19', spreadSheetId: '1HqmYazVB1AKA1ohFzdperzSgvvt8To2UWjAmj3GSE4c', sheetId: 1902976065}, 
+{name: 'Nethawk_Fy19 Q2 Content Syndication_Content Syndication_FY19', spreadSheetId: '1HqmYazVB1AKA1ohFzdperzSgvvt8To2UWjAmj3GSE4c', sheetId: 340944093}, 
+{name: 'Nethawk_Fy19 Q3 Content Syndication_Content Syndication_FY19', spreadSheetId: '1HqmYazVB1AKA1ohFzdperzSgvvt8To2UWjAmj3GSE4c', sheetId: 994982252}, 
+{name: 'Nethawk_Q4 Content Syndication_Content Syndication_FY19', spreadSheetId: '1HqmYazVB1AKA1ohFzdperzSgvvt8To2UWjAmj3GSE4c', sheetId: 857755468}, 
+{name: 'SecuritySymposium_ID Tracker_In-Person Event_FY19', spreadSheetId: '1GWuP3VP3klVy-zaqj2QnThJ3pEBFBolA0CtKBNVBtSw', sheetId: 353643213}, 
+{name: 'RHUG and Meetup_FY19 RHUGs and Meetups Tracker_In-Person Event_FY19', spreadSheetId: '1uTHmzXQ7lF0aGgiBSgvOq9_mMuLVLo7MtihD6cwbPLs', sheetId: 1728102092}, 
+{name: 'RHUG and Meetup_FY20 RHUGs and Meetups Tracker_In-Person Event_FY20', spreadSheetId: '1uTHmzXQ7lF0aGgiBSgvOq9_mMuLVLo7MtihD6cwbPLs', sheetId: 1895193126}, 
+{name: 'Open Demo_FY19 Tactics_Demos_FY19', spreadSheetId: '1AJWhOiN7gQRSS_EiESFaPutKJYt0D9TwStEMCOLPthU', sheetId: 0}, 
+{name: 'Open Demo_FY20 Mid-Market Tactics_Demos_FY20', spreadSheetId: '1AJWhOiN7gQRSS_EiESFaPutKJYt0D9TwStEMCOLPthU', sheetId: 1596525001}, 
+{name: 'Open Demo_FY20 Strategic & Enterprise Tactics_Demos_FY20', spreadSheetId: '1AJWhOiN7gQRSS_EiESFaPutKJYt0D9TwStEMCOLPthU', sheetId: 352318711}, 
+{name: 'IBG Nethawk_ITO | HC | ITA&M_Content Syndication_FY20', spreadSheetId: '1VP8Usz4rO_4ghBTBlm7z1ND3KCQTfQhB_7236bnT0uA', sheetId: 177009047}, 
+{name: 'IBG Nethawk_Misc Tracker_NA?_FY20', spreadSheetId: '1VP8Usz4rO_4ghBTBlm7z1ND3KCQTfQhB_7236bnT0uA', sheetId: 625252013}, 
+{name: 'Go Faster CS_Agile Integration_Content Syndication_FY20', spreadSheetId: '13FjyXSl7x23vNB6jCkFCsKJIk7KReMDStDPWBFcbyjg', sheetId: 629430500}, 
+{name: 'Go Faster CS_Cloud-Native App Dev_Content Syndication_FY20', spreadSheetId: '13FjyXSl7x23vNB6jCkFCsKJIk7KReMDStDPWBFcbyjg', sheetId: 1857457420}, 
+{name: 'Go Faster CS_PAM_Content Syndication_FY20', spreadSheetId: '13FjyXSl7x23vNB6jCkFCsKJIk7KReMDStDPWBFcbyjg', sheetId: 41889785}, 
+{name: 'Judy AI and PAM_Virtual Events_Digital Event_FY20', spreadSheetId: '1c7Co92pomJwvwtL_QK5QpjXhvE7QkKtNj_aaFX2uYkM', sheetId: 2018494083}, 
+{name: 'Judy AI and PAM_Agile Integration Thought Leadership_In-Person Event_FY20', spreadSheetId: '1c7Co92pomJwvwtL_QK5QpjXhvE7QkKtNj_aaFX2uYkM', sheetId: 33418013}, 
+{name: 'Judy AI and PAM_Agile Integration Workshops_In-Person Event_FY20', spreadSheetId: '1c7Co92pomJwvwtL_QK5QpjXhvE7QkKtNj_aaFX2uYkM', sheetId: 970430935}, 
+{name: 'Judy AI and PAM_PAM Workshops_In-Person Event_FY20', spreadSheetId: '1c7Co92pomJwvwtL_QK5QpjXhvE7QkKtNj_aaFX2uYkM', sheetId: 250228483}, 
+{name: 'Judy AI and PAM_Misc Industry Events / Telemarketing_NA?_FY20', spreadSheetId: '1c7Co92pomJwvwtL_QK5QpjXhvE7QkKtNj_aaFX2uYkM', sheetId: 1171364572}, 
+{name: 'Judy AI PDA CN_BrightTalk_Digital Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 136344186}, 
+{name: 'Judy AI PDA CN_Misc Activities_Digital Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 1171364572}, 
+{name: 'Judy AI PDA CN_*NEW* AppMod Workshops_In-Person Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 997463502}, 
+{name: 'Judy AI PDA CN_*NEW* Agile Integration Thought Leadership_In-Person Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 33418013}, 
+{name: 'Judy AI PDA CN_*NEW* Agile Integration Workshops_In-Person Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 970430935}, 
+{name: 'Judy AI PDA CN_PAM Workshops_In-Person Event_FY19', spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4', sheetId: 250228483}, 
+{name: 'Karen ABM Telco_FY20 Webinars_Digital Event_FY20', spreadSheetId: '1ldhOSi8NdN8PBUkf6Vsr4K2SSY2nazwtLOlWIfWQRW4', sheetId: 1982001444}, 
+{name: 'Karen ABM Telco_FY20 Newsletters/Emails_Email/Newletter_FY20', spreadSheetId: '1ldhOSi8NdN8PBUkf6Vsr4K2SSY2nazwtLOlWIfWQRW4', sheetId: 1898734727}, 
+{name: 'Karen ABM Telco_FY20 In-Person Events_In-Person Event_FY20', spreadSheetId: '1ldhOSi8NdN8PBUkf6Vsr4K2SSY2nazwtLOlWIfWQRW4', sheetId: 176412000}, 
+{name: 'Katie ABM_FY20 Webinars/Virtual Events_Digital Event_FY20', spreadSheetId: '1SlOj55HeOG7mldHzB-Q85E1-7LsQhiis300EfnWkQvU', sheetId: 140604917}, 
+{name: 'Katie ABM_FY20 Newsletters/Emails_Email/Newletter_FY20', spreadSheetId: '1SlOj55HeOG7mldHzB-Q85E1-7LsQhiis300EfnWkQvU', sheetId: 433335227}, 
+{name: 'Katie ABM_FY20 Events_In-Person Event_FY20', spreadSheetId: '1SlOj55HeOG7mldHzB-Q85E1-7LsQhiis300EfnWkQvU', sheetId: 467761614}, 
+{name: 'Katrina_FY20 In-Person Events_In-Person Event_FY20', spreadSheetId: '1Ncs5EICs_H0Euv1J_zHIj06V1cV2rCcciam6oTBJMCg', sheetId: 740406497}, 
+{name: 'Katrina_FY20 Industry Events_Industry Event_FY20', spreadSheetId: '1Ncs5EICs_H0Euv1J_zHIj06V1cV2rCcciam6oTBJMCg', sheetId: 383225213}, 
+{name: 'Kasey_Virtual Events_Digital Event_FY19', spreadSheetId: '1cNOwcJp53u3jxiPpizFU6TdPSBmWIwrzeog9PM-rjTo', sheetId: 240966070}, 
+{name: 'Kasey_Emails/Direct Mail_Email/Newletter_FY19', spreadSheetId: '1cNOwcJp53u3jxiPpizFU6TdPSBmWIwrzeog9PM-rjTo', sheetId: 0}, 
+{name: 'Kasey_Virtual Events_Digital Event_FY20', spreadSheetId: '1pCC8lgEAt7jDWDXXFeNbUaKcXWGvEv7Uk6ytohwUVIY', sheetId: 240966070}, 
+{name: 'Kasey_Industry Events_Industry Event_FY20', spreadSheetId: '1pCC8lgEAt7jDWDXXFeNbUaKcXWGvEv7Uk6ytohwUVIY', sheetId: 1855796039}, 
+{name: 'Kasey_Emails/Direct Mail/Surveys/Telenet_NA?_FY20', spreadSheetId: '1pCC8lgEAt7jDWDXXFeNbUaKcXWGvEv7Uk6ytohwUVIY', sheetId: 0}, 
+{name: 'Landen ABM_FY20 Webinars/Virtual Events_Digital Event_FY20', spreadSheetId: '1Qv9WPy2Ra3JAIEG08_l2sdAWrvsciHBk7zQ15K0DOwo', sheetId: 314613069}, 
+{name: 'Landen ABM_FY20 Newsletters/Emails_Email/Newletter_FY20', spreadSheetId: '1Qv9WPy2Ra3JAIEG08_l2sdAWrvsciHBk7zQ15K0DOwo', sheetId: 1912698628}, 
+{name: 'Landen ABM_FY20 Events_In-Person Event_FY20', spreadSheetId: '1Qv9WPy2Ra3JAIEG08_l2sdAWrvsciHBk7zQ15K0DOwo', sheetId: 0}, 
+{name: 'Mendeil ABM_FY20 Webinars/Virtual Events_Digital Event_FY20', spreadSheetId: '1fHR3m18zrXhnWI7Ecy52HvJp6MAivI-6_j6usxob3-s', sheetId: 1399886600}, 
+{name: 'Mendeil ABM_FY20 Newsletters_Email/Newletter_FY20', spreadSheetId: '1fHR3m18zrXhnWI7Ecy52HvJp6MAivI-6_j6usxob3-s', sheetId: 1158581662}, 
+{name: 'Mendeil ABM_FY20 In-Person Events_In-Person Event_FY20', spreadSheetId: '1fHR3m18zrXhnWI7Ecy52HvJp6MAivI-6_j6usxob3-s', sheetId: 1731027752}, 
+{name: 'MidMarket_Other Activites FY19 Mid-Market - NEW_Digital Media_FY19', spreadSheetId: '1ircw9TuGx-7EgcNvL1YW5Pd7nQsElHAh7jruCvnEzRc', sheetId: 1188278085}, 
+{name: 'MidMarket_FY19 Mid-Market Events - NEW_In-Person Event_FY19', spreadSheetId: '1ircw9TuGx-7EgcNvL1YW5Pd7nQsElHAh7jruCvnEzRc', sheetId: 141447522}, 
+{name: 'MidMarket_FY20 Mid-Market Content Syndication_Content Syndication_FY20', spreadSheetId: '1Qw6ubV_kv-IyZEMKnAG3EL3fG3SC5fK_2rrUraMYo5I', sheetId: 1188278085}, 
+{name: 'MidMarket_FY20 Mid-Market In-Person Events_In-Person Event_FY20', spreadSheetId: '1Qw6ubV_kv-IyZEMKnAG3EL3fG3SC5fK_2rrUraMYo5I', sheetId: 141447522}, 
+{name: 'MidMarket_FY20 Mid-Market Direct Mail / Social / Etc._NA?_FY20', spreadSheetId: '1Qw6ubV_kv-IyZEMKnAG3EL3fG3SC5fK_2rrUraMYo5I', sheetId: 929674325}, 
+{name: 'MPC Tracker_FY19 SFDC IDs_In-Person Event_FY19', spreadSheetId: '1SnEA59OIK_4wRlxys8_K5deDcC8G3Qxpk-R27ZGZ34I', sheetId: 1106449413}, 
+{name: 'MPC Tracker_FY20 SFDC IDs_In-PersonEvent_FY20', spreadSheetId: '1SnEA59OIK_4wRlxys8_K5deDcC8G3Qxpk-R27ZGZ34I', sheetId: 1774829766}, 
+{name: 'Northeast_FY19 NE - Webinar_Digital Event_FY19', spreadSheetId: '1g8yQKlQbEOgLdK_qMwKbgElqx3bjuR7r4TrIooBqwws', sheetId: 66420062}, 
+{name: 'Northeast_FY19 NE - In-Person Events_In-Person Event_FY19', spreadSheetId: '1g8yQKlQbEOgLdK_qMwKbgElqx3bjuR7r4TrIooBqwws', sheetId: 1636464929}, 
+{name: 'Northeast_FY20 NE - In-Person Events_In-Person Event_FY20', spreadSheetId: '1g8yQKlQbEOgLdK_qMwKbgElqx3bjuR7r4TrIooBqwws', sheetId: 1157240868}, 
+{name: 'Nori ABM Telco_FY19 - Webinars_Digital Event_FY19', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 314613069}, 
+{name: 'Nori ABM Telco_FY20 - Webinars_Digital Event_FY20', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 945791041}, 
+{name: 'Nori ABM Telco_FY19 - Newsletters/Emails_Email/Newletter_FY19', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 1912698628}, 
+{name: 'Nori ABM Telco_FY20 - Newsletters/Emails_Email/Newletter_FY20', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 918434088}, 
+{name: 'Nori ABM Telco_FY19 - In-Person Events_In-Person Event_FY19', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 0}, 
+{name: 'Nori ABM Telco_FY20 - In-Person Events_In-Person Event_FY20', spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U', sheetId: 466277281}, 
+{name: 'ONUG_Tracker_In-Person Event_FY19', spreadSheetId: '1iU0x9MZiwCxFR2I26l6OKrx5rRlweOC9CVqbb-ioUH0', sheetId: 801177165}, 
+{name: 'Nicole Organic Social_FY20 Organic Social - Tracking_Digital Media_FY20', spreadSheetId: '16P8yQo7UsL3f0pMbth9JCQrp0K4HwwsjyKzmeNp20fg', sheetId: 1036629958}, 
+{name: 'PaigeL Activity_Call Blitz_Call Blitz_FY19', spreadSheetId: '1-yLvwP6XWI9YVKIoEyURLzdPxN6dk3fF8oUDSHjE9YQ', sheetId: 33418013}, 
+{name: 'PaigeL Activity_Cross-Sell Program_Direct Sales Enablement_FY19', spreadSheetId: '1-yLvwP6XWI9YVKIoEyURLzdPxN6dk3fF8oUDSHjE9YQ', sheetId: 970430935}, 
+{name: 'PaigeL Activity_In-Person Events_In-Person Event_FY19', spreadSheetId: '1-yLvwP6XWI9YVKIoEyURLzdPxN6dk3fF8oUDSHjE9YQ', sheetId: 997463502}, 
+{name: 'Paige_Call Blitz_Call Blitz_FY20', spreadSheetId: '1LOtTODPHEVhVhS1d1QddM1w8rMCPiluAakM_v7SCVGI', sheetId: 33418013}, 
+{name: 'Paige_Content Syndication_Content Syndication_FY20', spreadSheetId: '1LOtTODPHEVhVhS1d1QddM1w8rMCPiluAakM_v7SCVGI', sheetId: 1529702081}, 
+{name: 'Paige_Brightalk_Digital Event_FY20', spreadSheetId: '1LOtTODPHEVhVhS1d1QddM1w8rMCPiluAakM_v7SCVGI', sheetId: 1236569161}, 
+{name: 'Paige_In-Person Events_In-Person Event_FY20', spreadSheetId: '1LOtTODPHEVhVhS1d1QddM1w8rMCPiluAakM_v7SCVGI', sheetId: 997463502}, 
+{name: 'Paige_Cross-Sell Program_NA?_FY20', spreadSheetId: '1LOtTODPHEVhVhS1d1QddM1w8rMCPiluAakM_v7SCVGI', sheetId: 970430935}, 
+{name: 'MPC Tracker_FY20 SFDC IDs_In-Person Event_FY20', spreadSheetId: '1AekSiasmfZj7TBf_vvAzvzxjJBuP7ci15PR6F8c0JJc', sheetId: 743639720}, 
+{name: 'Public Sector_Content Syndication_Content Syndication_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 1219613545}, 
+{name: 'Public Sector_Webinars / Virtual Events_Digital Event_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 314613069}, 
+{name: 'Public Sector_Emails / Digital / Social / Telemarketing_Digital Media_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 1991586459}, 
+{name: 'Public Sector_In-person Events_In-Person Event_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 0}, 
+{name: 'Public Sector_Industry Events_Industry Event_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 621747415}, 
+{name: 'Public Sector_OPEN FIRST Road Tour_In-Person Event_FY19', spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8', sheetId: 893819128}, 
+{name: 'Public Sector_Content Syndication_Content Syndication_FY20', spreadSheetId: '177DgbJfrjlTbFzuDT1ZkARZcm_eM1KKML2FzcbaDCw4', sheetId: 1219613545}, 
+{name: 'Public Sector_Webinars / Virtual Events_Digital Event_FY20', spreadSheetId: '177DgbJfrjlTbFzuDT1ZkARZcm_eM1KKML2FzcbaDCw4', sheetId: 314613069}, 
+{name: 'Public Sector_Emails / Digital / Social / Telemarketing_Digital Media_FY20', spreadSheetId: '177DgbJfrjlTbFzuDT1ZkARZcm_eM1KKML2FzcbaDCw4', sheetId: 1991586459}, 
+{name: 'Public Sector_In-person Events_In-Person Event_FY20', spreadSheetId: '177DgbJfrjlTbFzuDT1ZkARZcm_eM1KKML2FzcbaDCw4', sheetId: 0}, 
+{name: 'Public Sector_Industry Events_Industry Event_FY20', spreadSheetId: '177DgbJfrjlTbFzuDT1ZkARZcm_eM1KKML2FzcbaDCw4', sheetId: 621747415}, 
+{name: 'Red Hat Summit_Sheet1_In-Person Event_FY20', spreadSheetId: '1riS7T9q7LytsKFWG8WT90OZxFzS49d7WQB-3LPKM9Rk', sheetId: 0}, 
+{name: 'Southeast_Southeast FY19 - Events - NEW_In-Person Event_FY19', spreadSheetId: '12l6Ew7An76LrJS72DXu_b22xWelRPg-hpNus-5Z2PBo', sheetId: 1792799373}, 
+{name: 'Southeast_Southeast FY19 - Other Activities - NEW_In-Person Event_FY19', spreadSheetId: '12l6Ew7An76LrJS72DXu_b22xWelRPg-hpNus-5Z2PBo', sheetId: 1014482782}, 
+{name: 'Southeast_Southeast FY19 - Events_In-Person Event_FY20', spreadSheetId: '1XDR_LdzlsGaZaojNGLBBi-l245IcL319Q2rWDtoKOmA', sheetId: 1792799373}, 
+{name: 'Services_Content Syndication_Content Syndication_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 520334201}, 
+{name: 'Services_Webinars_Digital Event_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 1975144449}, 
+{name: 'Services_BrightTalk_Digital Event_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 416693763}, 
+{name: 'Services_Paid Digital_Digital Media_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 662134736}, 
+{name: 'Services_Emails/Direct Mail_Email/Newletter_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 1946903240}, 
+{name: 'Services_In-Person Events_In-Person Event_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 9458142}, 
+{name: 'Services_MISC_NA?_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 1567271622}, 
+{name: 'Services_OLD - Telemarketing_Telemarketing_FY19', spreadSheetId: '1Hu5lo9wctumhS-Yi73xHDvXWaWWwJdZrtjXJbOKzZkM', sheetId: 1847681710}, 
+{name: 'Services_Content Syndication_Content Syndication_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 520334201}, 
+{name: 'Services_BrightTalk_Digital Event_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 416693763}, 
+{name: 'Services_Webinars_Digital Event_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 1975144449}, 
+{name: 'Services_Paid Digital_Digital Media_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 662134736}, 
+{name: 'Services_Emails/Direct Mail_Email/Newletter_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 1946903240}, 
+{name: 'Services_In-Person Events_In-Person Event_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 9458142}, 
+{name: 'Services_MISC_NA?_FY20', spreadSheetId: '1KcmSK3HajVRp58NdF_ZckCkJXV5YKsF5yRdP1zYycLQ', sheetId: 1567271622}, 
+{name: 'West_In-Person Events_In-Person Event_FY19', spreadSheetId: '1E47xwZPI8ZdmkfEXg4YhkJGPXaFu0BwOaZuobn78rK8', sheetId: 0}, 
+{name: 'West_In-Person Events_In-Person Event_FY20', spreadSheetId: '1bTau8895BnFN87rLSei9A5_zFEOJdiUxC9q9pRYigRM', sheetId: 0}
+ ];
+  
+  sheetsToExport.forEach(downloadCSV);
+ sendCompleted();
+}
+
+function downloadCSV(sheetToExport) {
+  var folder = "1R-zURHoVJSHDhsCvHNuNctYUJ4qEmoU-";
+  var fileName = sheetToExport.name + "_ID_" + sheetToExport.spreadSheetId + "_ID_" + sheetToExport.sheetId + ".csv";
+  
+  var sheet = getSheetById(sheetToExport.spreadSheetId, sheetToExport.sheetId);
+  if (!sheet) {
+    Logger.log("Unable to locate sheet with id " + sheetId);
+    return;
+  }
+  
+  var csv = '';
+  sheet.getDataRange().getValues().forEach(function(e) {
+    csv += e.map(function(item) {
+      var value = item;
+      if (item instanceof Date) {
+         value = Utilities.formatDate(item, "GMT", "MM/dd/YYYY");
+      }
+      
+      return (value + "").replace(/[\,\r\n]/g,' ')
+    }).join(",") + "\n";
+  });
+  
+  var folder = DriveApp.getFolderById(folder);
+  var existingFile = folder.getFilesByName(fileName);
+  if (existingFile.hasNext()) {
+     var file = existingFile.next();
+     if (file.getName() === fileName) {
+       Drive.Files.update({
+         title: file.getName(),
+         mimeType: MimeType.CSV
+       }, file.getId(), Utilities.newBlob('').setDataFromString(csv).setContentType("text/csv"));
+       return;
+    }
+  }
+  
+  folder.createFile(fileName, csv, MimeType.CSV)
+}
+
+function sendCompleted() {
+  MailApp.sendEmail('pmueller@redhat.com, rudesai@redhat.com', "Done with Export", "Extraction Trackers: NAFM Campaign Tracker - FY19 & 20, completed."); 
+}
+
+function getSheetById(spreadSheetId, sheetId) {
+ var spreadSheet = SpreadsheetApp.openById(spreadSheetId);
+  
+  var sheets = spreadSheet.getSheets();
+  for (var i = 0; i < sheets.length; i++) {
+    var sheet = sheets[i];
+    Logger.log(sheet.getSheetId());
+    if (sheet.getSheetId() === sheetId) {
+      return sheet;
+    }
+  } 
+  
+  return undefined;
+}
